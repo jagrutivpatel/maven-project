@@ -1,5 +1,9 @@
 pipeline {
-    agent worknode5
+    agent {
+        node {
+            label 'worknode5'
+        }
+    }  
 
     stages {
         stage('Checkout') {
